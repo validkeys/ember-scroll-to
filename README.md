@@ -5,7 +5,7 @@ Animated vertical scrolling to a specified id.
 
 ## Installation
 
-From within your ember-cli project directory: 
+From within your ember-cli project directory:
 
 ```bash
 ember install ember-scroll-to
@@ -46,6 +46,7 @@ you could also use 'linear'. If you want more, check out [jQuery UI](http://jque
 * `offset` -- An optional offset. The most common use case for this is if you have a fixed header
 that you need to account for.
 
+
 Example usage with all options at once:
 
 ```hbs
@@ -81,6 +82,7 @@ this.get('scroller').scrollVertical(target, options);
 * `duration`
 * `easing`
 * `complete` -- a callback to execute once the scrolling animation is complete.
+* `scrollable` -- By default, ember-scroll-to will scroll the document to your selector's position. In the event that your selector lives within an overflow:hidden container, you'll want to scroll that container rather than the document. In that case, simply pass in the selector of your container (ex. ".my-container").
 
 The method returns a Promise that will resolve as soon as the animation has completed.
 
